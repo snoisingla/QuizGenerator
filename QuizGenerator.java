@@ -15,16 +15,6 @@ class Question{
 }
 
 class QuizGenerator{
-	public static void createInput(){ /* Create pool of Questions */
-		Random rn = new Random();
-		String[] difficulty = new String[]{"HARD","MEDIUM","EASY"};
-		for(int i = 1; i <=600; i++){
-			int ans = rn.nextInt(6) + 1;
-			int index = rn.nextInt(3);
-			System.out.println("Q"+i+"|"+difficulty[index]+"|Tag"+ans);
-		}				
-	}
-
 	public static int findNumberOfQuizes(ArrayList<Question> questionPool, ArrayList<String> requirements){
 		ArrayList<ArrayList<String>> quizzesArray = new ArrayList<>();
 		boolean isAnotherQuizPossible = true;
